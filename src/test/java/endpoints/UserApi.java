@@ -11,13 +11,13 @@ public class UserApi {
 
     public static Response createUser(String name, String job) {
         return given()
-                .header(API_KEY_HEADER, API_KEY_VALUE)         // ← REQUIRED API KEY HEADER
+                .header(API_KEY_HEADER, API_KEY_VALUE)         
                 .contentType("application/json")
                 .accept("application/json")
                 .log().all()
                 .body(Map.of("name", name, "job", job))
             .when()
-                .post("/users");   // https://reqres.in/api/users
+                .post("/users");  
     }
 
     public static Response updateUser(String id, String name, String job) {
