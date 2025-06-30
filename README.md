@@ -30,7 +30,7 @@ Automated test suite for the ReqRes public API (https://reqres.in), covering end
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/your-org/reqres-api-automation.git
+   git clone https://github.com/khaledyoussef24/reqres-api-automation
    cd reqres-api-automation
    ```
 ````
