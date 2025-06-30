@@ -68,7 +68,3 @@ Workflow file: `.github/workflows/ci-cd.yaml`
 - **Parallel Execution**: Configure TestNG to run tests concurrently.
 
 ---
-
-```
-
-```
