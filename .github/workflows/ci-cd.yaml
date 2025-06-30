@@ -1,3 +1,4 @@
+# .github/workflows/ci-cd.yaml
 name: CI
 on: [push, pull_request]
 
@@ -6,13 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
           distribution: "temurin"
           java-version: "11"
+
       - name: Run Tests
-        run: mvn clean test allure:report
+        run: mvn clean test
+
+      - name: Generate Allure Report
+        run: mvn io.qameta.allure:allure-maven:report
+
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
